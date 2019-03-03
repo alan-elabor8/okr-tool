@@ -1,10 +1,10 @@
 {
   "okrs": [
     {
-      "objective": "asdfdsf",
+      "objective": "Happy customers",
       "objectiveType": "Operational",
       "benefit": "",
-      "Benefit": "Financial",
+      "Benefit": "Non-fincancial",
       "id": 1
     }
   ],
