@@ -1,4 +1,5 @@
 import React, {Component} from 'react';
+import {default as UUID} from "uuid";
 
 /* Import Components */
 import CheckBox from '../components/CheckBox';
@@ -7,10 +8,10 @@ import TextArea from '../components/TextArea';
 import Select from '../components/Select';
 import Button from '../components/Button'
 
+
 class OkrContainer extends Component {
   constructor(props) {
     super(props);
-
     this.state = {
 
       typeOptions: ['Operational', 'Non-Operational'],
@@ -43,12 +44,12 @@ class OkrContainer extends Component {
   handleFormSubmit(e) {
     console.log("About to save");
 
-
     e.preventDefault();
     let okrData = this.state.newOkr;
-
-    fetch('http://localhost:8080/okrs/1',{
-        method: "PUT",
+    let newId = this.state.id;
+    console.log("newID : ", newId);
+    fetch('http://localhost:8080/okrs/' ,{
+        method: "POST",
         body: JSON.stringify(okrData),
         headers: {
           'Accept': 'application/json',
@@ -59,6 +60,7 @@ class OkrContainer extends Component {
           console.log("Successful" + data);
         })
     })
+
   }
 
   handleClearForm(e) {
@@ -74,9 +76,13 @@ class OkrContainer extends Component {
       })
   }
 
+componentWillMount() {
+    this.id = UUID.v4();
+    console.log("Generate UUID {this.id}" +UUID.v4());
+  }
+
   render() {
     return (
-
         <form className="container-fluid" onSubmit={this.handleFormSubmit}>
 
             <Input inputType={'text'}
@@ -96,7 +102,7 @@ class OkrContainer extends Component {
                   /> {/* Type Selection */}
 
           <Select title={'Benefit'}
-                  name={'Benefit'}
+                  name={'benefit'}
                   options={this.state.benefitOptions}
                   value={this.state.newOkr.benefit}
                   placeholder={'Select Benefit'}
@@ -118,7 +124,6 @@ class OkrContainer extends Component {
           /> {/* Clear the form */}
 
         </form>
-
     );
   }
 }

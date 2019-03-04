@@ -15,3 +15,10 @@
     <div key={okr.id}>
                     <p>{okr.objective}</p>
                 </div>
+
+
+
+                <p>{okr.id} {okr.objective}</p>
+
+
+OKRS3

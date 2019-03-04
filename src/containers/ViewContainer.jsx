@@ -1,5 +1,8 @@
 import React, {Component} from 'react';
 import Button from '../components/Button'
+import OkrTable from '../components/OkrTable.jsx'
+import {BootstrapTable,
+       TableHeaderColumn} from 'react-bootstrap-table';
 
 class ViewContainer extends Component {
   constructor(props) {
@@ -17,20 +20,10 @@ componentDidMount() {
     fetch('http://localhost:8080/okrs')
     .then((response) => response.json())
     .then((responseJson) => {
-        console.log(responseJson);
+        console.log("Response", responseJson);
 
-        let okrs = responseJson.map((okr) => {
-
-            console.log(okr.objective);
-            return(
-
-                <p>{okr.id} {okr.objective}</p>
-            )
-
-        })
-
-        this.setState({okrs: okrs});
-        console.log("OKRS" , this.state.okrs);
+        this.setState({okrs: responseJson})
+        console.log("Okrs saved in state: " , this.state.okrs);
 
     })
 }
@@ -38,11 +31,13 @@ componentDidMount() {
 
 
 render() {
+    console.log("OKRS3" , this.state.okrs);
     return (
-        <div className="container1">
-        <div>{this.state.okrs}</div>
-        </div>
-    );
+          <div className="App">
+            <p className="Table-header">OKR List</p>
+            <OkrTable data={this.state.okrs}/>
+          </div>
+        );
     }
 }
 

@@ -1,18 +1,22 @@
 {
   "okrs": [
     {
-      "objective": "aaa",
+      "objective": "A new objective",
       "objectiveType": "Non-Operational",
-      "benefit": "",
-      "Benefit": "Financial",
-      "id": 1
+      "benefit": "Non-fincancial",
+      "id": 3
     },
     {
-      "objective": "bbb",
-      "objectiveType": "Non-Operational",
-      "benefit": "",
-      "Benefit": "Financial",
-      "id": 2
+      "objective": "qqq",
+      "objectiveType": "Operational",
+      "benefit": "Financial",
+      "id": 4
+    }
+  ],
+  "sequences": [
+    {
+      "id": 1,
+      "currentValue": 0
     }
   ],
   "posts": [
