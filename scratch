@@ -1,0 +1,17 @@
+{
+    console.log(results.objective);
+        return results.json;
+    }).then(data => {
+    console.log("Data: " + JSON.stringify(data, null, 2));
+    {/*
+        let okr = data.map((okr) => {
+            console.log(okr);
+        })
+        */}
+        console.log("Save state here");
+    })
+
+
+    <div key={okr.id}>
+                    <p>{okr.objective}</p>
+                </div>

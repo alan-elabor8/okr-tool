@@ -1,11 +1,18 @@
 {
   "okrs": [
     {
-      "objective": "Happy customers",
-      "objectiveType": "Operational",
+      "objective": "aaa",
+      "objectiveType": "Non-Operational",
       "benefit": "",
-      "Benefit": "Non-fincancial",
+      "Benefit": "Financial",
       "id": 1
+    },
+    {
+      "objective": "bbb",
+      "objectiveType": "Non-Operational",
+      "benefit": "",
+      "Benefit": "Financial",
+      "id": 2
     }
   ],
   "posts": [
