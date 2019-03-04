@@ -4,7 +4,8 @@ import OkrTable from '../components/OkrTable.jsx'
 import {BootstrapTable,
        TableHeaderColumn} from 'react-bootstrap-table';
 import ReactTable from "react-table";
-import 'react-table/react-table.css'
+import 'react-table/react-table.css';
+import {withRouter, Link,  BrowserRouter as Router} from "react-router-dom";
 
 class ViewContainer extends Component {
   constructor(props) {
@@ -38,7 +39,7 @@ render() {
       const columns = [{
         Header: 'Id',
         accessor: 'id', // String-based value accessors!
-        Cell: e =><a href={e.value}> {e.value} </a>
+        Cell: ({ row }) => (<Link to={{ pathname: `/keyresults/${row.id}` }}>{row.id}</Link>)
       },
       {
         Header: 'Objective',
@@ -78,10 +79,7 @@ render() {
 
 
     return (
-
-
-          <ReactTable data={this.state.okrs} columns={columns} defaultPageSize={5} />
-
+                <ReactTable data={this.state.okrs} columns={columns} defaultPageSize={5} />
         );
     }
 }

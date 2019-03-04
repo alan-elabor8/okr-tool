@@ -18,7 +18,8 @@
       "objective": "",
       "objectiveType": "Non-Operational",
       "benefit": "Financial",
-      "id": 5
+      "id": 5,
+      "progress": 100
     },
     {
       "objective": "",
@@ -31,6 +32,12 @@
       "objectiveType": "",
       "benefit": "",
       "id": 7
+    },
+    {
+      "objective": "sdcdscdc",
+      "objectiveType": "Operational",
+      "benefit": "",
+      "id": 8
     }
   ],
   "sequences": [

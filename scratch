@@ -21,4 +21,4 @@
                 <p>{okr.id} {okr.objective}</p>
 
 
-OKRS3
+        Cell: e =><a href={e.value}> {e.value} </a>

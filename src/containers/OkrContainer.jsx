@@ -1,5 +1,6 @@
 import React, {Component} from 'react';
 import {default as UUID} from "uuid";
+import {Link} from "react-router-dom";
 
 /* Import Components */
 import CheckBox from '../components/CheckBox';
@@ -84,7 +85,8 @@ componentWillMount() {
   render() {
     return (
         <form className="container-fluid" onSubmit={this.handleFormSubmit}>
-
+             <Link to="/about">About</Link>
+             <Link to="/keyresults">KeyResults</Link>
             <Input inputType={'text'}
                    title= {'Objective'}
                    name= {'objective'}
