@@ -4,13 +4,33 @@
       "objective": "A new objective",
       "objectiveType": "Non-Operational",
       "benefit": "Non-fincancial",
-      "id": 3
+      "id": 3,
+      "progress": 50
     },
     {
       "objective": "qqq",
       "objectiveType": "Operational",
       "benefit": "Financial",
-      "id": 4
+      "id": 4,
+      "progress": 10
+    },
+    {
+      "objective": "",
+      "objectiveType": "Non-Operational",
+      "benefit": "Financial",
+      "id": 5
+    },
+    {
+      "objective": "",
+      "objectiveType": "Non-Operational",
+      "benefit": "Financial",
+      "id": 6
+    },
+    {
+      "objective": "ddd",
+      "objectiveType": "",
+      "benefit": "",
+      "id": 7
     }
   ],
   "sequences": [
