@@ -12,7 +12,7 @@ ReactDOM.render((
   <div>
     <Route path="/home" component={App}/>
     <Route path="/about" component={About}/>
-    <Route path="/keyresults" component={KeyResults}/>
+    <Route path="/keyresults/:id" component={KeyResults}/>
     </div>
   </BrowserRouter>
 ), document.getElementById('root'))

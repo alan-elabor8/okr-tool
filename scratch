@@ -22,3 +22,17 @@
 
 
         Cell: e =><a href={e.value}> {e.value} </a>
+
+
+        componentDidMount() {
+              console.log("About to fetch data for single objective ", this.props.match.params.id)
+              fetch(`http://localhost:8080/okrs/${this.props.id}`)
+              .then((response) => response.json())
+              .then((responseJson) => {
+                  console.log("Response", responseJson);
+
+                  this.setState({okr: responseJson})
+                  console.log("Okrs saved in state: " , this.state.okr);
+
+              })
+        }

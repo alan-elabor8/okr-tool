@@ -15,7 +15,7 @@ class OkrContainer extends Component {
     super(props);
     this.state = {
 
-      typeOptions: ['Operational', 'Non-Operational'],
+      typeOptions: ['Operational', 'Aspirational'],
       benefitOptions: ['Financial', 'Non-fincancial'],
 
       newOkr: {
