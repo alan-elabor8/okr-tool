@@ -3,9 +3,7 @@ import {default as UUID} from "uuid";
 import {Link} from "react-router-dom";
 
 /* Import Components */
-import CheckBox from '../components/CheckBox';
 import Input from '../components/Input';
-import TextArea from '../components/TextArea';
 import Select from '../components/Select';
 import Button from '../components/Button'
 
@@ -21,7 +19,8 @@ class OkrContainer extends Component {
       newOkr: {
         objective: '',
         objectiveType: '',
-        benefit: ''
+        benefit: '',
+        progress: 10
       }
 
     }
@@ -84,9 +83,11 @@ componentWillMount() {
 
   render() {
     return (
+        <div>
+        <Link to="/about">About</Link>
+        <Link to="/allkeyresults">All KeyResults</Link>
         <form className="container-fluid" onSubmit={this.handleFormSubmit}>
-             <Link to="/about">About</Link>
-             <Link to="/keyresults">KeyResults</Link>
+
             <Input inputType={'text'}
                    title= {'Objective'}
                    name= {'objective'}
@@ -126,6 +127,7 @@ componentWillMount() {
           /> {/* Clear the form */}
 
         </form>
+        </div>
     );
   }
 }

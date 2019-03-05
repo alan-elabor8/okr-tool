@@ -1,11 +1,7 @@
 import React, {Component} from 'react';
-import Button from '../components/Button'
-import OkrTable from '../components/OkrTable.jsx'
-import {BootstrapTable,
-       TableHeaderColumn} from 'react-bootstrap-table';
 import ReactTable from "react-table";
 import 'react-table/react-table.css';
-import {withRouter, Link,  BrowserRouter as Router} from "react-router-dom";
+import {Link,  BrowserRouter as Router} from "react-router-dom";
 
 class ViewContainer extends Component {
   constructor(props) {

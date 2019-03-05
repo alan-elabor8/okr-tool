@@ -1,7 +1,4 @@
 import React, {Component} from 'react';
-import OkrTable from '../components/OkrTable.jsx'
-import {BootstrapTable,
-       TableHeaderColumn} from 'react-bootstrap-table';
 import ReactTable from "react-table";
 import 'react-table/react-table.css';
 
