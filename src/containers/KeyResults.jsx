@@ -83,7 +83,7 @@ render() {
 
 
     return (
-        <div className="col-md-6">
+        <div className="col-md-10">
 
         <div>KeyResults for {this.props.match.params.id}</div>
         <Link to='/home'>Home</Link>

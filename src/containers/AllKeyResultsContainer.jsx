@@ -1,6 +1,4 @@
 import React, {Component} from 'react';
-import {BootstrapTable,
-       TableHeaderColumn} from 'react-bootstrap-table';
 import ReactTable from "react-table";
 import 'react-table/react-table.css';
 import {Link} from "react-router-dom";
@@ -79,7 +77,7 @@ combineData() {
   const columns = [{
         Header: 'Key Result Id',
         accessor: 'keyResultId', // String-based value accessors!
-        width: 'auto'
+        width: '100'
       },
       {
         Header: 'Objective Id',
@@ -113,7 +111,7 @@ combineData() {
         }
   ]
     return(
-        <div className="col-md-6">
+        <div className="col-md-10">
             <Link to='/home'>Home</Link>
             <h2>All Key Results</h2>
             <ReactTable data={this.state.allResults} columns={columns} defaultPageSize={10} />

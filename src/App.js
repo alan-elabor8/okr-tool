@@ -8,7 +8,7 @@ import ViewContainer from './containers/ViewContainer';
 class App extends Component {
   render() {
     return (
-      <div className="col-md-6">
+      <div className="col-md-10">
         <h3> OKR Container </h3>
         <OkrContainer />
         <ViewContainer />
