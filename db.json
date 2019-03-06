@@ -26,6 +26,15 @@
       "progress": 10,
       "metric": "asdsdf",
       "id": 4
+    },
+    {
+      "objective": "O1",
+      "objectiveType": "Operational",
+      "benefit": "Non-fincancial",
+      "progress": 10,
+      "metric": "M1",
+      "target": "T1",
+      "id": 5
     }
   ],
   "keyresults": [
@@ -70,6 +79,13 @@
       "targetdate": "asdfsdf",
       "squad": "dfafsdfa",
       "id": 6
+    },
+    {
+      "objectiveId": "5",
+      "keyresult": "kr1",
+      "targetdate": "1",
+      "squad": "X",
+      "id": 7
     }
   ],
   "posts": [

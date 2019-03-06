@@ -35,6 +35,7 @@ componentDidMount() {
             <div>Benefit: {this.state.okr.benefit}</div>
             <div>ObjectiveType: {this.state.okr.objectiveType}</div>
             <div>Metric: {this.state.okr.metric}</div>
+            <div>Target: {this.state.okr.target}</div>
             <h4>Key Results</h4>
             <KeyResultsContainer objectiveId={this.props.id}/>
         <hr/>

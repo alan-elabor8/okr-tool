@@ -119,6 +119,14 @@ componentWillMount() {
                    handleChange = {this.handleInput}
                    /> {/* Name of the metric */}
 
+            <Input inputType={'text'}
+                   title= {'Target'}
+                   name= {'target'}
+                   value={this.state.newOkr.target}
+                   placeholder = {'Enter an target'}
+                   handleChange = {this.handleInput}
+                   /> {/* Name of the target */}
+
           <Button
               action = {this.handleFormSubmit}
               type = {'primary'}

@@ -50,6 +50,10 @@ render() {
           accessor: 'metric' // String-based value accessors!
         },
         {
+          Header: 'Target',
+          accessor: 'target' // String-based value accessors!
+        },
+        {
                 Header: 'Objective Progress',
                 accessor: 'progress',
                 Cell: row => (
