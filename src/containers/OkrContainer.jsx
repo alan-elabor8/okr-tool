@@ -6,6 +6,7 @@ import {Link} from "react-router-dom";
 import Input from '../components/Input';
 import Select from '../components/Select';
 import Button from '../components/Button'
+import ViewContainer from './ViewContainer';
 
 
 class OkrContainer extends Component {
@@ -141,6 +142,7 @@ componentWillMount() {
           /> {/* Clear the form */}
 
         </form>
+        <ViewContainer />
         </div>
     );
   }

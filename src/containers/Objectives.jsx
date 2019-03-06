@@ -6,8 +6,7 @@ function Objectives() {
 
     return(
         <div>
-        <OkrContainer />
-        <ViewContainer />
+            <OkrContainer />
         </div>
 
     )
