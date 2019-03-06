@@ -114,7 +114,7 @@ componentWillMount() {
                    title= {'Metric'}
                    name= {'metric'}
                    value={this.state.newOkr.metric}
-                   placeholder = {'Enter an metric'}
+                   placeholder = {'Enter a metric'}
                    handleChange = {this.handleInput}
                    /> {/* Name of the metric */}
 
@@ -122,7 +122,7 @@ componentWillMount() {
                    title= {'Target'}
                    name= {'target'}
                    value={this.state.newOkr.target}
-                   placeholder = {'Enter an target'}
+                   placeholder = {'Enter a target'}
                    handleChange = {this.handleInput}
                    /> {/* Name of the target */}
 
