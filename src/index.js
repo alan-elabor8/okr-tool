@@ -7,17 +7,16 @@ import AllKeyResults from './containers/AllKeyResultsContainer';
 import About from './modules/About';
 import registerServiceWorker from './registerServiceWorker';
 import { BrowserRouter, Route } from 'react-router-dom'
-import Navigation from './components/Navigation';
+
 
 ReactDOM.render((
+<div>
+
   <BrowserRouter>
-  <div>
-    <Route path="/home" component={App}/>
-    <Route path="/about" component={About}/>
-    <Route path="/keyresults/:id" component={KeyResults}/>
-    <Route path="/allkeyresults/" component={AllKeyResults}/>
-    </div>
+
+    <App/>
   </BrowserRouter>
+  </div>
 ), document.getElementById('root'))
 
 
