@@ -52,7 +52,8 @@ async componentDidMount() {
                     objective : okr.objective,
                     squad : keyresult.squad,
                     metric : okr.metric,
-                    target : okr.target
+                    target : okr.target,
+                    progress : keyresult.progress
                     }
                  console.log("allOkr ", allOkr)
 
@@ -108,12 +109,17 @@ combineData() {
           Header: 'Target',
           accessor: 'target', // String-based value accessors!
           width: 'auto'
+        },
+        {
+          Header: 'Progress',
+          accessor: 'progress', // String-based value accessors!
+          width: 'auto'
         }
   ]
     return(
         <div className="col-md-10">
             <h2>All Key Results</h2>
-            <ReactTable data={this.state.allResults} columns={columns} defaultPageSize={10} />
+            <ReactTable data={this.state.allResults} columns={columns} defaultPageSize={50} />
         </div>
     );
   }

@@ -116,6 +116,14 @@ render() {
                   handleChange = {this.handleInput}
                   /> {/* Name of the squad */}
 
+            <Input inputType={'text'}
+                  title= {'Progress'}
+                  name= {'progress'}
+                  value={this.state.newKeyResult.progress}
+                  placeholder = {'Enter progress'}
+                  handleChange = {this.handleInput}
+                  /> {/* Amount of progress */}
+
           <Button
               action = {this.handleFormSubmit}
               type = {'primary'}
