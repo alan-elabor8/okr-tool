@@ -7,6 +7,7 @@ import AllKeyResults from './containers/AllKeyResultsContainer';
 import About from './modules/About';
 import registerServiceWorker from './registerServiceWorker';
 import { BrowserRouter, Route } from 'react-router-dom'
+import Navigation from './components/Navigation';
 
 ReactDOM.render((
   <BrowserRouter>
