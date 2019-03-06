@@ -52,7 +52,8 @@ async componentDidMount() {
                     targetDate : keyresult.targetdate,
                     objectiveId : okr.id,
                     objective : okr.objective,
-                    squad : keyresult.squad
+                    squad : keyresult.squad,
+                    metric : okr.metric
                     }
                  console.log("allOkr ", allOkr)
 
@@ -97,6 +98,11 @@ combineData() {
         {
           Header: 'Squad',
           accessor: 'squad', // String-based value accessors!
+        width: 'auto'
+        },
+        {
+          Header: 'Metric',
+          accessor: 'metric', // String-based value accessors!
         width: 'auto'
         }
   ]

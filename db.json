@@ -18,6 +18,14 @@
       "benefit": "Financial",
       "progress": 10,
       "id": 3
+    },
+    {
+      "objective": "",
+      "objectiveType": "",
+      "benefit": "",
+      "progress": 10,
+      "metric": "asdsdf",
+      "id": 4
     }
   ],
   "keyresults": [
@@ -55,6 +63,13 @@
       "targetdate": "yesterday",
       "squad": "X",
       "id": 5
+    },
+    {
+      "objectiveId": "4",
+      "keyresult": "New reulst",
+      "targetdate": "asdfsdf",
+      "squad": "dfafsdfa",
+      "id": 6
     }
   ],
   "posts": [

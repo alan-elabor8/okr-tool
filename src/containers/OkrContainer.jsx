@@ -111,6 +111,14 @@ componentWillMount() {
                   handleChange = {this.handleInput}
                   /> {/* Benefit Selection */}
 
+            <Input inputType={'text'}
+                   title= {'Metric'}
+                   name= {'metric'}
+                   value={this.state.newOkr.metric}
+                   placeholder = {'Enter an metric'}
+                   handleChange = {this.handleInput}
+                   /> {/* Name of the metric */}
+
           <Button
               action = {this.handleFormSubmit}
               type = {'primary'}
