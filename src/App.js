@@ -9,8 +9,8 @@ import KeyResults from './containers/KeyResults'
 class App extends Component {
   render() {
     return (
-       <div>
-    <Navigation/>
+       <div className="col-md-10">
+        <Navigation/>
 
         <Switch>
              <Route exact path='/home' component={Objectives} />

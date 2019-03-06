@@ -86,7 +86,6 @@ render() {
         <div className="col-md-10">
 
         <div>KeyResults for {this.props.match.params.id}</div>
-        <Link to='/home'>Home</Link>
         <div>
         <SingleOKR id={this.props.match.params.id}/>
         </div>

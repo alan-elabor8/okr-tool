@@ -112,7 +112,6 @@ combineData() {
   ]
     return(
         <div className="col-md-10">
-            <Link to='/home'>Home</Link>
             <h2>All Key Results</h2>
             <ReactTable data={this.state.allResults} columns={columns} defaultPageSize={10} />
         </div>
