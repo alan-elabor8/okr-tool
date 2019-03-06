@@ -1,8 +1,6 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
 import './App.css';
 import OkrContainer from './containers/OkrContainer';
-import FormContainer from './containers/FormContainer';
 import ViewContainer from './containers/ViewContainer';
 
 class App extends Component {

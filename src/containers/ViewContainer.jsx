@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
 import ReactTable from "react-table";
 import 'react-table/react-table.css';
-import {Link,  BrowserRouter as Router} from "react-router-dom";
+import {Link} from "react-router-dom";
 
 class ViewContainer extends Component {
   constructor(props) {
@@ -86,10 +86,6 @@ render() {
                 <ReactTable data={this.state.okrs} columns={columns} defaultPageSize={5} />
         );
     }
-}
-
-const buttonStyle = {
-  margin : '10px 10px 10px 10px'
 }
 
 export default ViewContainer;

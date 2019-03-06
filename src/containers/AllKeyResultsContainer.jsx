@@ -38,7 +38,7 @@ async componentDidMount() {
 
 
      console.log("About to combine data");
-     const combinedResults = this.state.keyresults.map((keyresult) =>{
+     this.state.keyresults.map((keyresult) =>{
                  console.log("Obj ID", keyresult.objectiveId)
                  console.log("Obj for this Result", this.state.okrs[parseInt(keyresult.objectiveId,10)-1])
                  var okr = this.state.okrs[parseInt(keyresult.objectiveId,10)-1]
