@@ -36,3 +36,8 @@
 
               })
         }
+
+
+        const combinedResults = this.state.keyresults.map((keyresult) =>
+                console.log(keyresult.id)
+            )

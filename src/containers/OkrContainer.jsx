@@ -84,7 +84,6 @@ componentWillMount() {
   render() {
     return (
         <div>
-        <Link to="/about">About</Link>
         <Link to="/allkeyresults">All KeyResults</Link>
         <form className="container-fluid" onSubmit={this.handleFormSubmit}>
 
