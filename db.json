@@ -1,209 +1,73 @@
 {
   "okrs": [
     {
-      "objective": "Obj1",
-      "objectiveType": "Operational",
+      "objective": "Build an OKR Tool",
+      "objectiveType": "Aspirational",
       "benefit": "Financial",
+      "progress": 10,
+      "metric": "Lines of code",
+      "target": "10 users",
       "id": 1
     },
     {
-      "objective": "Obj2",
-      "objectiveType": "Operational",
+      "objective": "Build a house",
+      "objectiveType": "Aspirational",
       "benefit": "Financial",
+      "progress": 10,
+      "metric": "Number of windows",
+      "target": "A mansion",
       "id": 2
     },
     {
-      "objective": "dcasdfdf",
+      "objective": "Build a car",
       "objectiveType": "Aspirational",
       "benefit": "Financial",
       "progress": 10,
+      "metric": "Number of wheels",
+      "target": "A fast one",
       "id": 3
-    },
-    {
-      "objective": "",
-      "objectiveType": "",
-      "benefit": "",
-      "progress": 10,
-      "metric": "asdsdf",
-      "id": 4
-    },
-    {
-      "objective": "O1",
-      "objectiveType": "Operational",
-      "benefit": "Non-fincancial",
-      "progress": 10,
-      "metric": "M1",
-      "target": "T1",
-      "id": 5
-    },
-    {
-      "objective": "qwer",
-      "objectiveType": "Operational",
-      "benefit": "Non-fincancial",
-      "progress": 10,
-      "metric": "1",
-      "target": "2",
-      "id": 6
-    },
-    {
-      "objective": "",
-      "objectiveType": "Aspirational",
-      "benefit": "Financial",
-      "progress": 10,
-      "metric": "1",
-      "target": "1",
-      "id": 7
-    },
-    {
-      "objective": "",
-      "objectiveType": "",
-      "benefit": "",
-      "progress": 10,
-      "id": 8
-    },
-    {
-      "objective": "1111",
-      "objectiveType": "",
-      "benefit": "",
-      "progress": 10,
-      "metric": "1111",
-      "target": "111",
-      "id": 9
-    },
-    {
-      "objective": "o2",
-      "objectiveType": "Aspirational",
-      "benefit": "Financial",
-      "progress": 10,
-      "metric": "om",
-      "target": "ot",
-      "id": 10
     }
   ],
   "keyresults": [
     {
       "objectiveId": "1",
-      "keyresult": "",
-      "targetdate": "",
-      "squad": "",
-      "progress": "123",
+      "keyresult": "Learn React",
+      "targetdate": "today",
+      "squad": "Alan",
+      "progress": "100",
       "id": 1
     },
     {
-      "objectiveId": "2",
-      "keyresult": "",
-      "targetdate": "",
-      "squad": "",
-      "progress": "xxxxx",
+      "objectiveId": "1",
+      "keyresult": "Write some React code",
+      "targetdate": "tomorrow",
+      "squad": "Alan",
+      "progress": "20",
       "id": 2
     },
     {
-      "objectiveId": "1",
-      "keyresult": "sadf",
-      "targetdate": "2134",
-      "squad": "qwer",
-      "id": 3,
-      "progress": "1234"
+      "objectiveId": "2",
+      "keyresult": "Build foundations",
+      "targetdate": "next week",
+      "squad": "Builders",
+      "progress": "30",
+      "id": 3
     },
     {
-      "objectiveId": "3",
-      "keyresult": "Result 3",
-      "targetdate": "today",
-      "squad": "C",
+      "objectiveId": "2",
+      "keyresult": "Build a wall",
+      "targetdate": "next month",
+      "squad": "Brickie",
+      "progress": "30",
       "id": 4
     },
     {
-      "objectiveId": "2",
-      "keyresult": "blah",
-      "targetdate": "yesterday",
-      "squad": "X",
+      "objectiveId": "3",
+      "keyresult": "Build the frame",
+      "targetdate": "today",
+      "squad": "Mechanic",
+      "progress": "75",
       "id": 5
-    },
-    {
-      "objectiveId": "4",
-      "keyresult": "New reulst",
-      "targetdate": "asdfsdf",
-      "squad": "dfafsdfa",
-      "id": 6
-    },
-    {
-      "objectiveId": "5",
-      "keyresult": "kr1",
-      "targetdate": "1",
-      "squad": "X",
-      "id": 7
-    },
-    {
-      "objectiveId": "6",
-      "keyresult": "r",
-      "targetdate": "r",
-      "squad": "r",
-      "id": 8
-    },
-    {
-      "objectiveId": "7",
-      "keyresult": "11",
-      "targetdate": "11",
-      "squad": "11",
-      "id": 9
-    },
-    {
-      "objectiveId": "9",
-      "keyresult": "222",
-      "targetdate": "222",
-      "squad": "222",
-      "id": 10
-    },
-    {
-      "objectiveId": "2",
-      "keyresult": "",
-      "targetdate": "",
-      "squad": "",
-      "id": 11
-    },
-    {
-      "objectiveId": "1",
-      "keyresult": "123",
-      "targetdate": "123",
-      "squad": "132",
-      "progress": "10",
-      "id": 12
-    },
-    {
-      "objectiveId": "10",
-      "keyresult": "k1",
-      "targetdate": "1",
-      "squad": "1",
-      "progress": "100",
-      "id": 13
-    },
-    {
-      "objectiveId": "2",
-      "keyresult": "1234",
-      "targetdate": "111",
-      "squad": "aaa",
-      "progress": "123",
-      "id": 14
     }
-  ],
-  "posts": [
-    {
-      "id": 1,
-      "title": "json-server",
-      "author": "typicode"
-    },
-    {
-      "id": 2
-    }
-  ],
-  "comments": [
-    {
-      "id": 1,
-      "body": "some comment",
-      "postId": 1
-    }
-  ],
-  "profile": {
-    "name": "typicode"
-  }
+  ]
 }

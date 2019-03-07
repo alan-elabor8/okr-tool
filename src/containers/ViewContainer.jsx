@@ -2,35 +2,62 @@ import React, {Component} from 'react';
 import ReactTable from "react-table";
 import 'react-table/react-table.css';
 import {Link} from "react-router-dom";
+import { Row } from 'react-bootstrap';
+import Progress from '../components/Progress';
 
 class ViewContainer extends Component {
   constructor(props) {
     super(props);
 
     this.state = {
-        okrs: []
+        okrs: [],
+        newOkrs: []
     }
 
     }
 
-
-componentDidMount() {
-    console.log("About to fetch data")
-    fetch('http://localhost:8080/okrs')
-    .then((response) => response.json())
-    .then((responseJson) => {
-        console.log("Response", responseJson);
-
-        this.setState({okrs: responseJson})
-        console.log("Okrs saved in state: " , this.state.okrs);
-
-    })
+async componentDidMount() {
+  console.log("About to fetch all objectives", this.props)
+  const response = await fetch('http://localhost:8080/okrs');
+  const responseJson = await response.json();
+  console.log("Sync Response", responseJson);
+   this.setState({okrs: responseJson})
+   console.log("Objectives saved in state: " , this.state.okrs);
+   await this.calcProgress();
 }
 
 
 
-render() {
-    console.log("OKRS3" , this.state.okrs);
+async calcProgress() {
+  this.state.okrs.map(async (okr) =>  {
+    console.log("Calc progress", okr.id)
+    const keyResultResponse =  await fetch(`http://localhost:8080/keyresults?objectiveId=${okr.id}`);
+    const keyResultJson =  await keyResultResponse.json();
+    console.log("Got KeyResults", keyResultJson)
+
+    let totalProgress = 0;
+    let averageProgress = 0;
+    const progressTotal = keyResultJson.map(result => {
+      console.log("KeyResult Progress",  result.progress);
+      totalProgress+=parseInt(result.progress, 10);
+    })
+    console.log("TotalProgress:" , totalProgress)
+    averageProgress = totalProgress / keyResultJson.length
+    console.log("Average Progress: ", averageProgress)
+    okr.progress = averageProgress >= 0 ? averageProgress : 0
+
+    this.setState( previousState => ({
+      newOkrs: [ ...previousState.newOkrs, okr]
+   }))
+  } 
+
+  )
+
+}
+
+ render() {
+
+    console.log("OKRS3" , this.state.newOkrs);
 
       const columns = [{
         Header: 'Id',
@@ -57,33 +84,14 @@ render() {
                 Header: 'Objective Progress',
                 accessor: 'progress',
                 Cell: row => (
-                  <div
-                    style={{
-                      width: '100%',
-                      height: '100%',
-                      backgroundColor: '#dadada',
-                      borderRadius: '2px'
-                    }}
-                  >
-                    <div
-                      style={{
-                        width: `${row.value}%`,
-                        height: '100%',
-                        backgroundColor: row.value > 66 ? '#85cc00'
-                          : row.value > 33 ? '#ffbf00'
-                          : '#ff2e00',
-                        borderRadius: '2px',
-                        transition: 'all .2s ease-out'
-                      }}
-                    />
-                  </div>
+                  <Progress value={row.value} />
                 )
               }
       ]
 
 
     return (
-                <ReactTable data={this.state.okrs} columns={columns} defaultPageSize={5} />
+                <ReactTable data={this.state.newOkrs} columns={columns} defaultPageSize={5} />
         );
     }
 }
