@@ -15,7 +15,7 @@ class App extends Component {
 
         <Switch>
              <Route exact path='/home' component={Objectives} />
-             <Route exact path='/allkeyresults' component={AllKeyResultsContainer} />
+             <Route exact path='/allokrs' component={AllKeyResultsContainer} />
              <Route exact path='/keyresults/:id' component={KeyResults} />
              <Route exact path='/editkeyresult/:id' component={EditKeyResult} />
         </Switch>

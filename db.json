@@ -26,6 +26,15 @@
       "metric": "Number of wheels",
       "target": "A fast one",
       "id": 3
+    },
+    {
+      "objective": "Alan",
+      "objectiveType": "Operational",
+      "benefit": "Financial",
+      "progress": 10,
+      "metric": "qwe",
+      "target": "1",
+      "id": 4
     }
   ],
   "keyresults": [
@@ -34,7 +43,7 @@
       "keyresult": "Learn React",
       "targetdate": "today",
       "squad": "Alan",
-      "progress": "100",
+      "progress": "90",
       "id": 1
     },
     {
@@ -68,6 +77,14 @@
       "squad": "Mechanic",
       "progress": "75",
       "id": 5
+    },
+    {
+      "objectiveId": "4",
+      "keyresult": "r1",
+      "targetdate": "today",
+      "squad": "alan",
+      "progress": "50",
+      "id": 6
     }
   ]
 }
