@@ -1,6 +1,7 @@
 import React, {Component} from 'react';
-import ReactTable from "react-table";
+import ReactTable from 'react-table';
 import 'react-table/react-table.css';
+import {Link} from 'react-router-dom';
 
 class KeyResultsContainer extends Component {
   constructor(props) {
@@ -24,6 +25,9 @@ componentDidMount() {
       })
 }
 
+editRow(row) {
+  console.log("EditMethod", row)
+}
   render() {
 
   const columns = [{
@@ -45,6 +49,11 @@ componentDidMount() {
         {
           Header: 'Progress',
           accessor: 'progress' // String-based value accessors!
+        },
+        {
+          Header: 'Edit/Delete',
+          accessor: 'id',
+          Cell: row => (<Link to={{ pathname: `/editkeyresult/${row.value}` }}>Edit</Link>)
         }
   ]
     return(
