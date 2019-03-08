@@ -89,6 +89,10 @@ async calcProgress() {
           accessor: 'okrScope'
         },
         {
+          Header: 'Recognition Profile',
+          accessor: 'recognitionProfile'
+        },
+        {
                 Header: 'Objective Progress',
                 accessor: 'progress',
                 Cell: row => (

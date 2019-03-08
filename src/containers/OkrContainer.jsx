@@ -17,6 +17,7 @@ class OkrContainer extends Component {
       typeOptions: ['Operational', 'Aspirational'],
       benefitOptions: ['Financial', 'Non-fincancial'],
       okrScope: ['Enterprise', 'Division','Team'],
+      recognitionProfile: ['Linear', 'Linear Rampup', 'Fast Rampup', 'Slow Rampup', 'N/A'],
 
       newOkr: {
         objective: '',
@@ -26,7 +27,8 @@ class OkrContainer extends Component {
         team : '',
         okrScope : '',
         startdate : '',
-        enddate : ''
+        enddate : '',
+        recognitionProfile : ''
       }
 
     }
@@ -116,7 +118,7 @@ componentWillMount() {
                   handleChange = {this.handleInput}
                   /> {/* Type Selection */}
 
-          <Select title={'Benefit'}
+            <Select title={'Benefit'}
                   name={'benefit'}
                   options={this.state.benefitOptions}
                   value={this.state.newOkr.benefit}
@@ -166,6 +168,13 @@ componentWillMount() {
                       /> 
 
                    </div>
+                   <Select title={'Recognition Profile'}
+                    name={'recognitionProfile'}
+                    options={this.state.recognitionProfile}
+                    value={this.state.newOkr.recognitionProfile}
+                    placeholder={'Select recognition profile'}
+                    handleChange = {this.handleInput}
+                  /> {/* Type Selection */}
               
           <Button
               action = {this.handleFormSubmit}
