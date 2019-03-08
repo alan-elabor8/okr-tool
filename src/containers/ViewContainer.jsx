@@ -81,8 +81,12 @@ async calcProgress() {
           accessor: 'target' // String-based value accessors!
         },
         {
-          Header: 'Squad',
-          accessor: 'squad'
+          Header: 'Team',
+          accessor: 'team' // String-based value accessors!
+        },
+        {
+          Header: 'Scope',
+          accessor: 'okrScope'
         },
         {
                 Header: 'Objective Progress',

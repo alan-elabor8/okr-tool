@@ -16,13 +16,15 @@ class OkrContainer extends Component {
 
       typeOptions: ['Operational', 'Aspirational'],
       benefitOptions: ['Financial', 'Non-fincancial'],
+      okrScope: ['Enterprise', 'Division','Team'],
 
       newOkr: {
         objective: '',
         objectiveType: '',
         benefit: '',
         progress: 10,
-        squad : ''
+        team : '',
+        okrScope : ''
       }
 
     }
@@ -96,6 +98,14 @@ componentWillMount() {
                    handleChange = {this.handleInput}
                    /> {/* Name of the OKR */}
 
+<         Select title={'Scope'}
+                  name={'okrScope'}
+                  options={this.state.okrScope}
+                  value={this.state.newOkr.okrScope}
+                  placeholder={'Select Scope'}
+                  handleChange = {this.handleInput}
+                  /> {/* Type Selection */}
+
           <Select title={'Type'}
                   name={'objectiveType'}
                   options={this.state.typeOptions}
@@ -129,10 +139,10 @@ componentWillMount() {
                    /> {/* Name of the target */}
 
             <Input inputType={'text'}
-                   title= {'Squad'}
-                   name= {'squad'}
-                   value={this.state.newOkr.squad}
-                   placeholder = {'Enter a squad name'}
+                   title= {'Team'}
+                   name= {'team'}
+                   value={this.state.newOkr.team}
+                   placeholder = {'Enter a team name'}
                    handleChange = {this.handleInput}
                    /> {/* Name of the target */}
 
