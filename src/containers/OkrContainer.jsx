@@ -24,7 +24,9 @@ class OkrContainer extends Component {
         benefit: '',
         progress: 10,
         team : '',
-        okrScope : ''
+        okrScope : '',
+        startdate : '',
+        enddate : ''
       }
 
     }
@@ -98,7 +100,7 @@ componentWillMount() {
                    handleChange = {this.handleInput}
                    /> {/* Name of the OKR */}
 
-<         Select title={'Scope'}
+            <Select title={'Scope'}
                   name={'okrScope'}
                   options={this.state.okrScope}
                   value={this.state.newOkr.okrScope}
@@ -106,7 +108,7 @@ componentWillMount() {
                   handleChange = {this.handleInput}
                   /> {/* Type Selection */}
 
-          <Select title={'Type'}
+              <Select title={'Type'}
                   name={'objectiveType'}
                   options={this.state.typeOptions}
                   value={this.state.newOkr.objectiveType}
@@ -146,6 +148,25 @@ componentWillMount() {
                    handleChange = {this.handleInput}
                    /> {/* Name of the target */}
 
+                   <div style={rowstyle} >
+                     <h5>Benefit Horizon</h5>
+                     <Input inputType={'text'}
+                        title= {'Start Date'}
+                        name= {'startdate'}
+                        value={this.state.newOkr.startdate}
+                        placeholder = {'Enter a startdate'}
+                        handleChange = {this.handleInput}
+                      /> 
+                     <Input inputType={'text'}
+                        title= {'End Date'}
+                        name= {'enddate'}
+                        value={this.state.newOkr.enddate}
+                        placeholder = {'Enter a enddate'}
+                        handleChange = {this.handleInput}
+                      /> 
+
+                   </div>
+              
           <Button
               action = {this.handleFormSubmit}
               type = {'primary'}
@@ -169,6 +190,11 @@ componentWillMount() {
 
 const buttonStyle = {
   margin : '10px 10px 10px 10px'
+}
+
+const rowstyle = {
+    flex: 1,
+    flexDirection: 'row'
 }
 
 export default OkrContainer ;
