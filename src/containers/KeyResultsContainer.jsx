@@ -43,10 +43,6 @@ editRow(row) {
           accessor: 'targetdate' // String-based value accessors!
         },
         {
-          Header: 'Squad',
-          accessor: 'squad' // String-based value accessors!
-        },
-        {
           Header: 'Progress',
           accessor: 'progress' // String-based value accessors!
         },

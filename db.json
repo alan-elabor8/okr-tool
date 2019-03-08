@@ -43,7 +43,7 @@
       "keyresult": "Learn React",
       "targetdate": "today",
       "squad": "Alan",
-      "progress": "90",
+      "progress": "50",
       "id": 1
     },
     {
@@ -51,7 +51,7 @@
       "keyresult": "Write some React code",
       "targetdate": "tomorrow",
       "squad": "Alan",
-      "progress": "20",
+      "progress": "50",
       "id": 2
     },
     {
@@ -85,6 +85,22 @@
       "squad": "alan",
       "progress": "50",
       "id": 6
+    },
+    {
+      "objectiveId": "5",
+      "keyresult": "Key result",
+      "targetdate": "08/06/2019",
+      "squad": "aaa",
+      "progress": "100",
+      "id": 7
+    },
+    {
+      "objectiveId": "1",
+      "keyresult": "Learn advanced React",
+      "targetdate": "03/06/2019",
+      "squad": "",
+      "progress": "90",
+      "id": 8
     }
   ]
 }

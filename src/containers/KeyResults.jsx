@@ -61,7 +61,6 @@ handleInput(e) {
        newKeyResult: {
               keyresult: '',
               targetdate: '',
-              squad: ''
             }
       })
   }
@@ -107,14 +106,6 @@ render() {
                    placeholder = {'Enter a target date'}
                    handleChange = {this.handleInput}
                    /> {/* Name of the KeyResult */}
-
-          <Input inputType={'text'}
-                  title= {'Squad'}
-                  name= {'squad'}
-                  value={this.state.newKeyResult.squad}
-                  placeholder = {'Enter squad'}
-                  handleChange = {this.handleInput}
-                  /> {/* Name of the squad */}
 
             <Input inputType={'text'}
                   title= {'Progress'}

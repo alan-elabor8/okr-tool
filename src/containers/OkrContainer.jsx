@@ -21,7 +21,8 @@ class OkrContainer extends Component {
         objective: '',
         objectiveType: '',
         benefit: '',
-        progress: 10
+        progress: 10,
+        squad : ''
       }
 
     }
@@ -124,6 +125,14 @@ componentWillMount() {
                    name= {'target'}
                    value={this.state.newOkr.target}
                    placeholder = {'Enter a target'}
+                   handleChange = {this.handleInput}
+                   /> {/* Name of the target */}
+
+            <Input inputType={'text'}
+                   title= {'Squad'}
+                   name= {'squad'}
+                   value={this.state.newOkr.squad}
+                   placeholder = {'Enter a squad name'}
                    handleChange = {this.handleInput}
                    /> {/* Name of the target */}
 

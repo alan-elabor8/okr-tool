@@ -81,12 +81,16 @@ async calcProgress() {
           accessor: 'target' // String-based value accessors!
         },
         {
+          Header: 'Squad',
+          accessor: 'squad'
+        },
+        {
                 Header: 'Objective Progress',
                 accessor: 'progress',
                 Cell: row => (
                   <Progress value={row.value} />
                 )
-              }
+        }
       ]
 
 
