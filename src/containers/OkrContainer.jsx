@@ -151,9 +151,10 @@ componentWillMount() {
                    placeholder = {'Enter a team name'}
                    handleChange = {this.handleInput}
                    /> {/* Name of the target */}
-
-                   <div style={rowstyle} >
+                  <hr></hr>
+                   <div >
                      <h5>Benefit Horizon</h5>
+                     <div className='form-inline'>
                      <Input inputType={'text'}
                         title= {'Start Date'}
                         name= {'startdate'}
@@ -168,7 +169,8 @@ componentWillMount() {
                         placeholder = {'Enter an enddate'}
                         handleChange = {this.handleInput}
                       /> 
-
+                      </div>
+                      <hr></hr>
                    </div>
                    <Select title={'Benefit Tracable'}
                     name={'benefitTracable'}
