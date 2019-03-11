@@ -18,6 +18,7 @@ class OkrContainer extends Component {
       benefitOptions: ['Financial', 'Non-fincancial'],
       okrScope: ['Enterprise', 'Division','Team'],
       recognitionProfile: ['Linear', 'Linear Rampup', 'Fast Rampup', 'Slow Rampup', 'N/A'],
+      yesNo: ['Yes', 'No'],
 
       newOkr: {
         objective: '',
@@ -28,7 +29,8 @@ class OkrContainer extends Component {
         okrScope : '',
         startdate : '',
         enddate : '',
-        recognitionProfile : ''
+        recognitionProfile : '',
+        benefitTracable : ''
       }
 
     }
@@ -163,11 +165,19 @@ componentWillMount() {
                         title= {'End Date'}
                         name= {'enddate'}
                         value={this.state.newOkr.enddate}
-                        placeholder = {'Enter a enddate'}
+                        placeholder = {'Enter an enddate'}
                         handleChange = {this.handleInput}
                       /> 
 
                    </div>
+                   <Select title={'Benefit Tracable'}
+                    name={'benefitTracable'}
+                    options={this.state.yesNo}
+                    value={this.state.newOkr.benefitTracable}
+                    placeholder={'Select benefit tracable'}
+                    handleChange = {this.handleInput}
+                  /> {/* Type Selection */}
+
                    <Select title={'Recognition Profile'}
                     name={'recognitionProfile'}
                     options={this.state.recognitionProfile}

@@ -11,10 +11,7 @@ function Navigation() {
       <Link className="navbar-brand" to="/home">Home</Link>
       <ul className="navbar-nav">
         <li className="nav-item">
-          <Link className="nav-link" to="/allokrs">All OKRs</Link>
-        </li>
-        <li className="nav-item">
-          <Link className="nav-link" to="/2">Page2</Link>
+          <Link className="nav-link" to="/allokrs">Dashboard</Link>
         </li>
       </ul>
     </nav>
