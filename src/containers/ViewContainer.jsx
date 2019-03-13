@@ -103,7 +103,10 @@ async calcProgress() {
 
 
     return (
+        <div>
+                <h2>All Objectives</h2>
                 <ReactTable data={this.state.newOkrs} columns={columns} defaultPageSize={5} />
+        </div>
         );
     }
 }
