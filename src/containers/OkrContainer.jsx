@@ -237,7 +237,6 @@ componentWillMount() {
           /> {/* Clear the form */}
 
         </form>
-        <ViewContainer />
         </div>
     );
   }
