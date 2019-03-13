@@ -10,4 +10,4 @@ To install the demo, you will need to
 ```json-server --watch db.json --port 8080```
 
 ## Run Docker json DB server
-```sudo docker run -d -p 80:80 -v /home/ec2-user/jsonserver/docker-json-server/data.json:/data/db.json clue/json-server```
+```sudo docker run -d -p 8080:80 -v /home/ec2-user/jsonserver/docker-json-server/data.json:/data/db.json clue/json-server```
