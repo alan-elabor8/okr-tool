@@ -7,13 +7,19 @@ import Input from '../components/Input';
 import Select from '../components/Select';
 import Button from '../components/Button'
 import ViewContainer from './ViewContainer';
+import DatePicker from 'react-datepicker';
+import moment from 'moment';
+
+import 'react-datepicker/dist/react-datepicker.css';
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 
 class OkrContainer extends Component {
   constructor(props) {
     super(props);
     this.state = {
-
+      startDate: new Date(),
+      endDate: new Date(),
       typeOptions: ['Operational', 'Aspirational'],
       benefitOptions: ['Financial', 'Non-fincancial'],
       okrScope: ['Enterprise', 'Division','Team'],
@@ -38,9 +44,33 @@ class OkrContainer extends Component {
     this.handleFormSubmit = this.handleFormSubmit.bind(this);
     this.handleClearForm = this.handleClearForm.bind(this);
     this.handleInput = this.handleInput.bind(this);
+    this.handleStartDateChange = this.handleStartDateChange.bind(this);
+    this.handleEndDateChange = this.handleEndDateChange.bind(this);
   }
 
   /* This lifecycle hook gets executed when the component mounts */
+
+  handleStartDateChange(date) {
+    this.setState({
+      startDate: date
+    });
+    this.setState( prevState => ({ newOkr :
+      {...prevState.newOkr, startdate: date
+      }
+    }));
+    console.log("Date set to:", date)
+  }
+
+  handleEndDateChange(date) {
+    this.setState({
+      endDate: date
+    });
+    this.setState( prevState => ({ newOkr :
+      {...prevState.newOkr, enddate: date
+      }
+    }));
+    console.log("Date set to:", date)
+  }
 
   handleInput(e) {
        let value = e.target.value;
@@ -153,22 +183,26 @@ componentWillMount() {
                    /> {/* Name of the target */}
                   <hr></hr>
                    <div >
-                     <h5>Benefit Horizon</h5>
+                     <label>Benefit Horizon</label>
                      <div className='form-inline'>
-                     <Input inputType={'text'}
-                        title= {'Start Date'}
-                        name= {'startdate'}
-                        value={this.state.newOkr.startdate}
-                        placeholder = {'Enter a startdate'}
-                        handleChange = {this.handleInput}
+                    
+                    <div className="form-group">
+                      <label>Select Start Date: </label>
+                      <DatePicker
+                      selected={this.state.startDate}
+                      onChange={this.handleStartDateChange}
+                      name="startDate"
                       /> 
-                     <Input inputType={'text'}
-                        title= {'End Date'}
-                        name= {'enddate'}
-                        value={this.state.newOkr.enddate}
-                        placeholder = {'Enter an enddate'}
-                        handleChange = {this.handleInput}
+                    </div>
+                    <label>Select End Date: </label>
+                      <DatePicker
+                      selected={this.state.endDate}
+                      onChange={this.handleEndDateChange}
+                      name="startDate"
+ 
                       /> 
+                    
+                   
                       </div>
                       <hr></hr>
                    </div>

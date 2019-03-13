@@ -24,8 +24,15 @@ componentDidMount() {
       })
 }
 
-  render() {
+getLocalDate(date) {
+  var dateToPrint = new Date(date).toLocaleDateString()
+  return dateToPrint
+}
 
+  render() {
+    var startDate = this.state.okr.startdate
+    var dateToPrint = new Date(startDate).toLocaleDateString()
+    console.log("Start Date:", dateToPrint)
     return(
         <div>
         <hr/>
@@ -36,6 +43,8 @@ componentDidMount() {
             <div>ObjectiveType: {this.state.okr.objectiveType}</div>
             <div>Metric: {this.state.okr.metric}</div>
             <div>Target: {this.state.okr.target}</div>
+            <div>Start Date: {this.getLocalDate(this.state.okr.startdate)}</div>
+            <div>End Date: {this.getLocalDate(this.state.okr.enddate)}</div>
             <h4>Key Results</h4>
             <KeyResultsContainer objectiveId={this.props.id}/>
         <hr/>
