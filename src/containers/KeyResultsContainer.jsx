@@ -14,7 +14,7 @@ class KeyResultsContainer extends Component {
 
 componentDidMount() {
       console.log("About to fetch keyresults for objective", this.props)
-      fetch(`http://localhost:8080/keyresults?objectiveId=${this.props.objectiveId}`)
+      fetch(`http://54.252.237.254:8080/keyresults?objectiveId=${this.props.objectiveId}`)
       .then((response) => response.json())
       .then((responseJson) => {
           console.log("Response", responseJson);

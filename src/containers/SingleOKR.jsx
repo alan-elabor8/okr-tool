@@ -13,7 +13,7 @@ class SingleOKR extends Component {
 
 componentDidMount() {
       console.log("About to fetch data for single objective ", this.props.id)
-      fetch(`http://localhost:8080/okrs/${this.props.id}`)
+      fetch(`http://54.252.237.254:8080/okrs/${this.props.id}`)
       .then((response) => response.json())
       .then((responseJson) => {
           console.log("Response", responseJson);

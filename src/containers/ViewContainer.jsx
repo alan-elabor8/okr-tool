@@ -18,7 +18,7 @@ class ViewContainer extends Component {
 
 async componentDidMount() {
   console.log("About to fetch all objectives", this.props)
-  const response = await fetch('http://localhost:8080/okrs');
+  const response = await fetch('http://54.252.237.254:8080/okrs');
   const responseJson = await response.json();
   console.log("Sync Response", responseJson);
    this.setState({okrs: responseJson})
@@ -31,7 +31,7 @@ async componentDidMount() {
 async calcProgress() {
   this.state.okrs.map(async (okr) =>  {
     console.log("Calc progress", okr.id)
-    const keyResultResponse =  await fetch(`http://localhost:8080/keyresults?objectiveId=${okr.id}`);
+    const keyResultResponse =  await fetch(`http://54.252.237.254:8080/keyresults?objectiveId=${okr.id}`);
     const keyResultJson =  await keyResultResponse.json();
     console.log("Got KeyResults", keyResultJson)
 

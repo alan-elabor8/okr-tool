@@ -88,7 +88,7 @@ class OkrContainer extends Component {
     let okrData = this.state.newOkr;
     let newId = this.state.id;
     console.log("newID : ", newId);
-    fetch('http://localhost:8080/okrs/' ,{
+    fetch('http://54.252.237.254:8080/okrs/' ,{
         method: "POST",
         body: JSON.stringify(okrData),
         headers: {

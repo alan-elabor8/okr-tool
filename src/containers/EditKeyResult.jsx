@@ -32,7 +32,7 @@ class EditKeyResult extends React.Component {
 
     e.preventDefault();
     let keyResultData = this.state.newKeyResult;
-    fetch(`http://localhost:8080/keyresults/${this.props.match.params.id}` ,{
+    fetch(`http://54.252.237.254:8080/keyresults/${this.props.match.params.id}` ,{
         method: "PUT",
         body: JSON.stringify(keyResultData),
         headers: {
@@ -49,7 +49,7 @@ class EditKeyResult extends React.Component {
 
   componentDidMount() {
     console.log("About to fetch key result data for", this.props.match.params.id)
-    fetch(`http://localhost:8080/keyresults/${this.props.match.params.id}`)
+    fetch(`http://54.252.237.254:8080/keyresults/${this.props.match.params.id}`)
     .then((response) => response.json())
     .then((responseJson) => {
         console.log("Response", responseJson);

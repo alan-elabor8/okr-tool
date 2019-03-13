@@ -38,7 +38,7 @@ handleInput(e) {
 
     e.preventDefault();
     let keyResultData = this.state.newKeyResult;
-    fetch('http://localhost:8080/keyresults/' ,{
+    fetch('http://54.252.237.254:8080/keyresults/' ,{
         method: "POST",
         body: JSON.stringify(keyResultData),
         headers: {
@@ -67,7 +67,7 @@ handleInput(e) {
 
 componentDidMount() {
       console.log("About to fetch objective data for objective", this.props.match.params.id)
-      fetch(`http://localhost:8080/okrs/${this.props.match.params.id}`)
+      fetch(`http://54.252.237.254:8080/okrs/${this.props.match.params.id}`)
       .then((response) => response.json())
       .then((responseJson) => {
           console.log("Response", responseJson);

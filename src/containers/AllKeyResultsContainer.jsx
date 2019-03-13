@@ -18,7 +18,7 @@ class AllKeyResultsContainer extends Component {
 
 async componentDidMount() {
       console.log("About to fetch all keyresults for objective", this.props)
-      const response = await fetch(`http://localhost:8080/keyresults`);
+      const response = await fetch(`http://54.252.237.254:8080/keyresults`);
       const responseJson = await response.json();
       console.log("Sync Response", responseJson);
        this.setState({keyresults: responseJson})
@@ -27,7 +27,7 @@ async componentDidMount() {
 
 
     console.log("About to fetch all objectives")
-    const okrResponse = await fetch('http://localhost:8080/okrs');
+    const okrResponse = await fetch('http://54.252.237.254:8080/okrs');
     const okrResponseJson = await okrResponse.json();
     console.log("Sync Response", okrResponseJson);
     console.log("Response", okrResponseJson);
