@@ -1,14 +1,13 @@
 import React, {Component} from 'react';
 import {default as UUID} from "uuid";
 import {Link} from "react-router-dom";
+import { withRouter } from 'react-router';
 
 /* Import Components */
 import Input from '../components/Input';
 import Select from '../components/Select';
 import Button from '../components/Button'
-import ViewContainer from './ViewContainer';
 import DatePicker from 'react-datepicker';
-import moment from 'moment';
 
 import 'react-datepicker/dist/react-datepicker.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
@@ -100,7 +99,7 @@ class OkrContainer extends Component {
           console.log("Successful" + data);
         })
     })
-
+    this.props.history.push('/home')
   }
 
   handleClearForm(e) {
@@ -252,4 +251,4 @@ const rowstyle = {
     flexDirection: 'row'
 }
 
-export default OkrContainer ;
+export default withRouter(OkrContainer) ;

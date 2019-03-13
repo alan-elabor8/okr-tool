@@ -49,7 +49,7 @@ editRow(row) {
         {
           Header: 'Edit/Delete',
           accessor: 'id',
-          Cell: row => (<Link to={{ pathname: `/editkeyresult/${row.value}` }}>Edit</Link>)
+          Cell: row => (<Link to={{ pathname: `/editkeyresult/${row.value}` }}>Edit Progress</Link>)
         }
   ]
     return(

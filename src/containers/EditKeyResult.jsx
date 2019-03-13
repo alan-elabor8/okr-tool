@@ -27,12 +27,12 @@ class EditKeyResult extends React.Component {
    }
 
 
-   handleFormSubmit(e) {
-    console.log("About to save");
+   async  handleFormSubmit(e) {
+    console.log("About to save key result edit");
 
     e.preventDefault();
     let keyResultData = this.state.newKeyResult;
-    fetch(`http://54.252.237.254:8080/keyresults/${this.props.match.params.id}` ,{
+    await fetch(`http://54.252.237.254:8080/keyresults/${this.props.match.params.id}` ,{
         method: "PUT",
         body: JSON.stringify(keyResultData),
         headers: {
@@ -41,10 +41,10 @@ class EditKeyResult extends React.Component {
         },
       }).then(response => {
         response.json().then(data =>{
-          console.log("Successful" + data);
+          console.log("Successfully saved key result edit" + data);
         })
     })
-
+    this.props.history.push(`/keyresults/${keyResultData.objectiveId}`)
   }
 
   componentDidMount() {
