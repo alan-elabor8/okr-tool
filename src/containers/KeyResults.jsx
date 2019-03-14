@@ -3,6 +3,10 @@ import Input from '../components/Input';
 import Button from '../components/Button'
 import SingleOKR from './SingleOKR';
 import { withRouter } from 'react-router';
+import DatePicker from 'react-datepicker';
+
+import 'react-datepicker/dist/react-datepicker.css';
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 class KeyResults extends Component {
   constructor(props) {
@@ -15,13 +19,14 @@ class KeyResults extends Component {
             targetdate: '',
             squad: ''
           },
-
+          targetDate: new Date()
 
       }
 
     this.handleFormSubmit = this.handleFormSubmit.bind(this);
     this.handleClearForm = this.handleClearForm.bind(this);
     this.handleInput = this.handleInput.bind(this);
+    this.handleTargetDateChange = this.handleTargetDateChange.bind(this);
   }
 
 handleInput(e) {
@@ -31,6 +36,17 @@ handleInput(e) {
         {...prevState.newKeyResult, [name]: value
         }
       }), () => console.log(this.state.newKeyResult))
+  }
+
+  handleTargetDateChange(date) {
+    this.setState({
+      targetdate: date
+    });
+    this.setState( prevState => ({ newKeyResult :
+      {...prevState.newKeyResult, targetdate: date
+      }
+    }));
+    console.log("Date set to:", date)
   }
 
   handleFormSubmit(e) {
@@ -99,14 +115,14 @@ render() {
                    handleChange = {this.handleInput}
                    /> {/* Name of the KeyResult */}
 
-           <Input inputType={'text'}
-                   title= {'Target Date'}
-                   name= {'targetdate'}
-                   value={this.state.newKeyResult.targetdate}
-                   placeholder = {'Enter a target date'}
-                   handleChange = {this.handleInput}
-                   /> {/* Name of the KeyResult */}
-
+            <div>
+            <label>Select Target Date: </label>
+                      <DatePicker
+                      selected={this.state.targetDate}
+                      onChange={this.handleTargetDateChange}
+                      name="targetDate"
+                      /> 
+            </div>  
             <Input inputType={'text'}
                   title= {'Progress'}
                   name= {'progress'}

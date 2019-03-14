@@ -25,6 +25,11 @@ componentDidMount() {
       })
 }
 
+getLocalDate(date) {
+  var dateToPrint = new Date(date).toLocaleDateString()
+  return dateToPrint
+}
+
 editRow(row) {
   console.log("EditMethod", row)
 }
@@ -40,7 +45,8 @@ editRow(row) {
       },
         {
           Header: 'Target Date',
-          accessor: 'targetdate' // String-based value accessors!
+          accessor: 'targetdate', // String-based value accessors!
+          Cell: row => (this.getLocalDate(row.value))
         },
         {
           Header: 'Progress',
