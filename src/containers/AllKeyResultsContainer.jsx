@@ -11,7 +11,6 @@ class AllKeyResultsContainer extends Component {
 
               allResults: []
     }
-    this.combineData = this.combineData.bind(this);
   }
 
 
@@ -68,9 +67,10 @@ async componentDidMount() {
 
 }
 
-combineData() {
-
-         }
+getLocalDate(date) {
+  var dateToPrint = new Date(date).toLocaleDateString()
+  return dateToPrint
+}
 
 
   render() {
@@ -92,6 +92,7 @@ combineData() {
         {
           Header: 'Target Date',
           accessor: 'targetDate', // String-based value accessors!
+          Cell: row => (this.getLocalDate(row.value)),
         width: 'auto'
         },
         {
