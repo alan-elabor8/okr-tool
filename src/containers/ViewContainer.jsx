@@ -4,6 +4,7 @@ import 'react-table/react-table.css';
 import {Link} from "react-router-dom";
 import { Row } from 'react-bootstrap';
 import Progress from '../components/Progress';
+import ScopeFilter from '../components/ScopeFilter';
 
 class ViewContainer extends Component {
   constructor(props) {
@@ -11,9 +12,11 @@ class ViewContainer extends Component {
 
     this.state = {
         okrs: [],
-        newOkrs: []
+        newOkrs: [],
+        filteredOkrs: [],
+        selectedScope : ''
     }
-
+    this.handleChange = this.handleChange.bind(this);
     }
 
 async componentDidMount() {
@@ -24,6 +27,7 @@ async componentDidMount() {
    this.setState({okrs: responseJson})
    console.log("Objectives saved in state: " , this.state.okrs);
    await this.calcProgress();
+  
 }
 
 
@@ -48,16 +52,25 @@ async calcProgress() {
 
     this.setState( previousState => ({
       newOkrs: [ ...previousState.newOkrs, okr]
-   }))
+    }), ()=> {
+      this.setState({filteredOkrs: this.state.newOkrs})
+    })
   } 
-
   )
 
 }
 
- render() {
+  handleChange(event) {
+    this.setState({selectedScope: event.target.value}, () => {
+      let tempFiltered = this.state.newOkrs.filter((okr) => (this.state.selectedScope==okr.okrScope || this.state.selectedScope=='All'))
+      console.log("tempFiltered : ", tempFiltered)   
+      this.setState({filteredOkrs: tempFiltered})
+    } );
+  }
 
-    console.log("OKRS3" , this.state.newOkrs);
+ render() {
+    console.log("Rendering");
+    console.log("OKRS3" , this.state.filteredOkrs);
 
       const columns = [{
         Header: 'Id',
@@ -104,8 +117,9 @@ async calcProgress() {
 
     return (
         <div>
+                <ScopeFilter handleChange={this.handleChange}/>
                 <h2>All Objectives</h2>
-                <ReactTable data={this.state.newOkrs} columns={columns} defaultPageSize={10} />
+                <ReactTable data={this.state.filteredOkrs} columns={columns} defaultPageSize={10} />
         </div>
         );
     }
