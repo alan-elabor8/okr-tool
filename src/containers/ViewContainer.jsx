@@ -2,7 +2,6 @@ import React, {Component} from 'react';
 import ReactTable from "react-table";
 import 'react-table/react-table.css';
 import {Link} from "react-router-dom";
-import { Row } from 'react-bootstrap';
 import Progress from '../components/Progress';
 import ScopeFilter from '../components/ScopeFilter';
 

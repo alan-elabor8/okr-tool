@@ -1,6 +1,5 @@
 import React, {Component} from 'react';
 import {default as UUID} from "uuid";
-import {Link} from "react-router-dom";
 import { withRouter } from 'react-router';
 
 /* Import Components */
@@ -244,11 +243,6 @@ componentWillMount() {
 
 const buttonStyle = {
   margin : '10px 10px 10px 10px'
-}
-
-const rowstyle = {
-    flex: 1,
-    flexDirection: 'row'
 }
 
 export default withRouter(OkrContainer) ;

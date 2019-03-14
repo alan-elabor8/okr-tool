@@ -1,7 +1,6 @@
 import React, {Component} from 'react';
 import ReactTable from "react-table";
 import 'react-table/react-table.css';
-import {Link} from "react-router-dom";
 
 class AllKeyResultsContainer extends Component {
   constructor(props) {

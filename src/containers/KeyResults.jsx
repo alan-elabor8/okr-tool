@@ -1,7 +1,6 @@
 import React, {Component} from 'react';
 import Input from '../components/Input';
 import Button from '../components/Button'
-import {Link} from "react-router-dom";
 import SingleOKR from './SingleOKR';
 
 class KeyResults extends Component {

@@ -2,10 +2,6 @@ import React from 'react'
 
 class ScopeFilter extends React.Component {
 
-    constructor(props) {
-        super(props);
-      }
-
     render() {
         return(
             <div>
@@ -23,9 +19,5 @@ class ScopeFilter extends React.Component {
         ) 
     }
 }
-
-const buttonStyle = {
-    margin : '10px 10px 10px 10px'
-  }
 
 export default ScopeFilter;
