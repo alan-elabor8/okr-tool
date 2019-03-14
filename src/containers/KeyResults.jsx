@@ -2,6 +2,7 @@ import React, {Component} from 'react';
 import Input from '../components/Input';
 import Button from '../components/Button'
 import SingleOKR from './SingleOKR';
+import { withRouter } from 'react-router';
 
 class KeyResults extends Component {
   constructor(props) {
@@ -49,7 +50,7 @@ handleInput(e) {
           console.log("Successful" + data);
         })
     })
-
+    this.props.history.push('/home')
   }
 
   handleClearForm(e) {
@@ -138,4 +139,4 @@ const buttonStyle = {
   margin : '10px 10px 10px 10px'
 }
 
-export default KeyResults;
+export default withRouter(KeyResults);
