@@ -85,7 +85,7 @@ class EnterKeyResult extends Component {
                     <div>
                     <label>Select Target Date: </label>
                                 <DatePicker
-                                selected={this.state.targetDate}
+                                selected={this.state.targetdate}
                                 onChange={this.handleTargetDateChange}
                                 name="targetDate"
                                 /> 
