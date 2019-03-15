@@ -7,6 +7,7 @@ import Navigation from './components/Navigation';
 import AllKeyResultsContainer from './containers/AllKeyResultsContainer'
 import KeyResults from './containers/KeyResults'
 import EditKeyResult from './containers/EditKeyResult';
+import EnterKeyResult from './containers/EnterKeyResult'
 
 class App extends Component {
   render() {
@@ -20,6 +21,7 @@ class App extends Component {
              <Route exact path='/home' component={AllKeyResultsContainer} />
              <Route exact path='/keyresults/:id' component={KeyResults} />
              <Route exact path='/editkeyresult/:id' component={EditKeyResult} />
+             <Route exact path='/enterkeyresult/:id' component={EnterKeyResult} />
         </Switch>
         </div>
 

@@ -1,43 +1,43 @@
-{
-    console.log(results.objective);
-        return results.json;
-    }).then(data => {
-    console.log("Data: " + JSON.stringify(data, null, 2));
-    {/*
-        let okr = data.map((okr) => {
-            console.log(okr);
-        })
-        */}
-        console.log("Save state here");
-    })
+
+        this.handleFormSubmit = this.handleFormSubmit.bind(this);
+        this.handleInput = this.handleInput.bind(this);
+        this.handleTargetDateChange = this.handleTargetDateChange.bind(this);
 
 
-    <div key={okr.id}>
-                    <p>{okr.objective}</p>
-                </div>
+        <form className="container-fluid" onSubmit={this.handleFormSubmit}>
+
+                <Input inputType={'text'}
+                        title= {'Key Result'}
+                        name= {'keyresult'}
+                        value={this.state.newKeyResult.keyresult}
+                        placeholder = {'Enter a key result'}
+                        handleChange = {this.handleInput}
+                        /> {/* Name of the KeyResult */}
+
+                <div>
+                <label>Select Target Date: </label>
+                            <DatePicker
+                            selected={this.state.targetDate}
+                            onChange={this.handleTargetDateChange}
+                            name="targetDate"
+                            /> 
+                </div>  
+                <Input inputType={'text'}
+                        title= {'Progress'}
+                        name= {'progress'}
+                        value={this.state.newKeyResult.progress}
+                        placeholder = {'Enter progress'}
+                        handleChange = {this.handleInput}
+                        /> {/* Amount of progress */}
+
+                <Button
+                    action = {this.handleFormSubmit}
+                    type = {'primary'}
+                    title = {'Submit'}
+                style={buttonStyle}
+                /> { /*Submit */ }
+
+            </form>
 
 
-
-                <p>{okr.id} {okr.objective}</p>
-
-
-        Cell: e =><a href={e.value}> {e.value} </a>
-
-
-        componentDidMount() {
-              console.log("About to fetch data for single objective ", this.props.match.params.id)
-              fetch(`http://localhost:8080/okrs/${this.props.id}`)
-              .then((response) => response.json())
-              .then((responseJson) => {
-                  console.log("Response", responseJson);
-
-                  this.setState({okr: responseJson})
-                  console.log("Okrs saved in state: " , this.state.okr);
-
-              })
-        }
-
-
-        const combinedResults = this.state.keyresults.map((keyresult) =>
-                console.log(keyresult.id)
-            )
+             {/* <Link className="nav-link" to={`/enterkeyresult/${this.props.match.params.id}`}>EnterKeyResult</Link> */}
